@@ -1,0 +1,1 @@
+npx tailwind build ./app/assets/stylesheets/tailwind_pre.css -o tailwind_build.css
