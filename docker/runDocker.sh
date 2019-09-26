@@ -13,3 +13,5 @@ docker push 025221494343.dkr.ecr.us-east-1.amazonaws.com/rileystech:discordmsgsc
 fi
 
 cd docker
+
+#RAILS_ENV=production bundle exec rake assets:precompile

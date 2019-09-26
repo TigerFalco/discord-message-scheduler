@@ -16,10 +16,12 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN bundle update --bundler
 RUN bundle install
-COPY . .
 
-#RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 RUN npm install yarn -g
+
+COPY . .
+#RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+
 RUN rails assets:precompile
 
 

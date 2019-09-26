@@ -31,3 +31,5 @@ https://dev.to/andrewmcodes/use-tailwind-css-1-0-in-your-rails-app-4pm4
 
 
 ```sudo gem install mysql2 -- --with-cflags=\"-I/usr/local/opt/openssl/include\" --with-ldflags=\"-L/usr/local/opt/openssl/lib\"```
+
+https://prathamesh.tech/2019/08/26/understanding-webpacker-in-rails-6/
