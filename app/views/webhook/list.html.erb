@@ -1,2 +1,18 @@
 <h1>Webhook#list</h1>
 <p>Find me in app/views/webhook/list.html.erb</p>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>link</th>
+  </tr>
+
+  <% @webhooks.each do |webhook| %>
+    <tr>
+      <td><%= webhook.name %></td>
+      <td><%= webhook.url %></td>
+      <td><%= link_to'Edit', "/webhook/#{webhook.id}/edit" %></td>
+      <td><%= link_to'Delete',  "/webhook/#{webhook.id}/delete" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

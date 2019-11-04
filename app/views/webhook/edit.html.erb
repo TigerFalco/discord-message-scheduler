@@ -1,2 +1,14 @@
 <h1>Webhook#edit</h1>
 <p>Find me in app/views/webhook/edit.html.erb</p>
+<%=form_for :webhook, url: "/webhook/#{@webhook.id}/update", method: :put do%>
+  <div>
+    <%= label_tag :name%>
+    <%= text_field_tag :name, @webhook.name %>
+  </div>
+  <div>
+    <%= label_tag :url%>
+    <%= text_field_tag :url, @webhook.url %>
+  </div>
+
+  <%= submit_tag 'Update webhook', class: "" %>
+<%end%>
