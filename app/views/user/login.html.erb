@@ -1,2 +1,14 @@
 <h1>User#login</h1>
 <p>Find me in app/views/user/login.html.erb</p>
+<%=form_for :user, url: '/user/login_post', method: :post do%>
+  <div>
+    <%= label_tag :username%>
+    <%= text_field_tag :username%>
+  </div>
+  <div>
+    <%= label_tag :password%>
+    <%= text_field_tag :password%>
+  </div>
+
+  <%= submit_tag 'Login', class: "" %>
+<%end%>

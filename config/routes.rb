@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   get 'message/update'
   get 'message/delete'
   get 'user/new'
-  get 'user/create'
+  post 'user/create'
   get 'user/login'
+  post 'user/login_post'
+  get 'user/home'
   get 'user/logout'
   get 'webhook/new'
   get 'webhook/create'
@@ -14,12 +16,8 @@ Rails.application.routes.draw do
   get 'webhook/update'
   get 'webhook/delete'
   get 'webhook/list'
-  get 'users/login'
-  get 'users/logout'
   get 'home/index'
   root 'home#index'
-
-  resources :users
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
